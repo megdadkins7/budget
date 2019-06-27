@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Title = styled.span`
-  fkex: 1;
+  flex: 1;
   font-size: 15px;
   color: #636363;
   margin: auto;
