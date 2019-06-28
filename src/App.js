@@ -1,8 +1,8 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
-import GlobalStyles from '../styles/GlobalStyles';
-import Entry from './Entry';
-import { theme } from '../styles/theme';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyles from './styles/GlobalStyles';
+import Entry from './components/Entry';
+import { theme } from './styles/theme';
 
 function App() {
   return (

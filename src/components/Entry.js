@@ -16,7 +16,7 @@ const Wrapper = styled.section`
   padding: 4px;
   background: #ebebeb;
   border-radius: 4px;
-  width: 200px;
+  width: 300px;
 `;
 
 export default function Entry(props) {
