@@ -3,19 +3,21 @@ import styled from "styled-components";
 
 const StyledEntry = styled.div`
   display: flex;
-  margin: auto;
-  padding: 4px;
+  padding: 10px;
   background: #ebebeb;
   border-radius: 4px;
-  width: 300px;
+  margin: 10px;
+} 
 
   span {
-    flex: 1;
     font-size: 15px;
     color: #636363;
-    margin: auto;
-    padding: 4px;
-    text-align: center
+    text-align: center;
+  }
+  
+  .entry-amount {
+    margin-left: 15px;
+    font-weight: 600;
   }
 `;
 
@@ -23,7 +25,7 @@ export default function Entry(props) {
   return (
     <StyledEntry>
       <span>{props.title}</span>
-      <span>${props.amount}</span>
+      <span className= 'entry-amount'>${props.amount}</span>
     </StyledEntry>
   );
 } 

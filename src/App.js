@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import Entry from './components/Entry';
+import SubCategory from './components/SubCategory';
 
 import GlobalStyles from './styles/GlobalStyles';
 import { theme } from './styles/theme';
@@ -11,7 +11,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        <Entry title="Oliver Smith Show" amount={37.50} />
+        <SubCategory />
       </>
     </ThemeProvider>
   );
