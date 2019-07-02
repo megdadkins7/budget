@@ -7,19 +7,19 @@ import Entry from './Entry';
 const StyledSubCategory = styled.div`
   width: 80%;
 
-  .subCategory-header {
+  .SubCategory-header {
     display: flex;
     font-size: 13px;
     color: #4d4d4d;
     margin: 16px;
-    font-weight: 600;
+    font-weight: 500;
   }
 
-  .subCategory-total {
+  .SubCategory-total {
     margin-left: auto;
   }
 
-  .subCategory-entries {
+  .SubCategory-entries {
     display: flex;
     flex-wrap: wrap;
     margin-left: 10px;
@@ -39,21 +39,20 @@ const subCategoryEntries = [
   {title: "Mumford & Sons Vinyl", amount: 15.65}
 ];
 
-const subCategoryTotal = subCategoryEntries.reduce(function(accumulator, currentValue) {
-  return accumulator + currentValue.amount;
-}, 0)
+const subCategoryTotal = subCategoryEntries.reduce((nextEntry, totalEntry) => 
+  nextEntry + totalEntry.amount, 0);
 
 export default function SubCategory(props) {
     return (
      <StyledSubCategory>
-      <div className='subCategory-header'>
+      <div className='SubCategory-header'>
         <span>{subCategoryInfo.title}</span>
-        <span className='subCategory-total'>${subCategoryTotal}</span>
+        <span className='SubCategory-total'>${subCategoryTotal}</span>
       </div>
-      <ul className='subCategory-entries'>
-        {subCategoryEntries.map(entryItem => {
-          return <Entry {...entryItem} />
-        })}
+      <ul className='SubCategory-entries'>
+        {subCategoryEntries.map(entryItem => 
+           <Entry {...entryItem} />
+        )}
       </ul>
      </StyledSubCategory>
     );
