@@ -51,8 +51,8 @@ export default function SubCategory(props) {
         <span className='subCategory-total'>${subCategoryTotal}</span>
       </div>
       <ul className='subCategory-entries'>
-        {subCategoryEntries.map(item => {
-          return <Entry {...item} />
+        {subCategoryEntries.map(entryItem => {
+          return <Entry {...entryItem} />
         })}
       </ul>
      </StyledSubCategory>
