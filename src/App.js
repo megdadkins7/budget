@@ -1,20 +1,20 @@
-import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
 
-import SubCategory from './components/SubCategory';
+import Category from './components/Category'
 
-import GlobalStyles from './styles/GlobalStyles';
-import { theme } from './styles/theme';
+import GlobalStyles from './styles/GlobalStyles'
+import { theme } from './styles/theme'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        <SubCategory />
+        <Category />
       </>
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App
