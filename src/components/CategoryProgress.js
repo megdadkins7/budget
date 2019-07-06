@@ -12,21 +12,16 @@ const StyledCategoryProgress = styled.div`
     color: #9b9b9b;
   }
   .CategoryProgressMeter {
-    height: 1px;
-    position: relative;
+    height: 4px;
     background: #e8e8e8;
-    border-radius: 25px;
-    padding: 2px;
+    border-radius: 2px;
+    overflow: hidden;
   }
   .CategoryProgressMeter > span {
     display: block;
     height: 100%;
-    border-radius: 25px;
+    border-radius: 2px;
     background-color: #9b9b9b;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
   }
 `
 

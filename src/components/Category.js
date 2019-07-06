@@ -4,8 +4,6 @@ import styled from 'styled-components'
 import CategoryProgress from './CategoryProgress'
 import SubCategory, { subCategoryTotal } from './SubCategory'
 
-import { numToCurrency } from '../lib'
-
 const StyledCategory = styled.div`
   width: 80%;
   .CategoryWrapper {
