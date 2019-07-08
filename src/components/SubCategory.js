@@ -6,7 +6,7 @@ import Entry from './Entry'
 import { numToCurrency } from '../lib'
 
 const StyledSubCategory = styled.div`
-  .SubCategory-header {
+  .SubCategoryHeader {
     display: flex;
     font-size: 13px;
     color: #4d4d4d;
@@ -14,11 +14,11 @@ const StyledSubCategory = styled.div`
     font-weight: 500;
   }
 
-  .SubCategory-total {
+  .SubCategoryTotal {
     margin-left: auto;
   }
 
-  .SubCategory-entries {
+  .SubCategoryEntries {
     display: flex;
     flex-wrap: wrap;
     margin-left: 10px;
@@ -26,7 +26,7 @@ const StyledSubCategory = styled.div`
 `
 
 const subCategoryInfo = {
-  id: 'unique',
+  id: 'booksmoviesmusic',
   title: 'Books/Movies/Music',
 }
 
@@ -46,13 +46,13 @@ export const subCategoryTotal = subCategoryEntries.reduce(
 export default function SubCategory(props) {
   return (
     <StyledSubCategory>
-      <div className="SubCategory-header">
+      <div className="SubCategoryHeader">
         <span>{subCategoryInfo.title}</span>
-        <span className="SubCategory-total">
+        <span className="SubCategoryTotal">
           {numToCurrency(subCategoryTotal)}
         </span>
       </div>
-      <ul className="SubCategory-entries">
+      <ul className="SubCategoryEntries">
         {subCategoryEntries.map(entryItem => (
           <Entry {...entryItem} />
         ))}

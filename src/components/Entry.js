@@ -15,7 +15,7 @@ const StyledEntry = styled.div`
     color: #636363;
     text-align: center;
   }
-  .entry-amount {
+  .EntryAmount {
     margin-left: 15px;
     font-weight: 500;
   }
@@ -25,7 +25,7 @@ export default function Entry(props) {
   return (
     <StyledEntry>
       <span>{props.title}</span>
-      <span className="entry-amount">{numToCurrency(props.amount)}</span>
+      <span className="EntryAmount">{numToCurrency(props.amount)}</span>
     </StyledEntry>
   )
 }
