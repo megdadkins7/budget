@@ -1,12 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { numToCurrency } from '../lib'
+
 const StyledCategoryProgress = styled.div`
   font-size: 32px;
-  margin: 10px;
-  .page {
-    display: inline-block;
-  }
   .CategoryProgressAmount {
     color: #3ddc97;
   }
@@ -34,17 +32,17 @@ function calcAmountCssPercent(trackerAmount, trackerTotal) {
 export default function CategoryProgress(props) {
   return (
     <StyledCategoryProgress>
-      <div className="page">
-        <span className="CategoryProgressAmount">${props.amount}</span>
-        <span className="CategoryProgressBudget">/{props.budget}</span>
-        <div className="CategoryProgressMeter">
-          <span
-            className="CategoryProgressBar"
-            style={{
-              width: calcAmountCssPercent(props.amount, props.budget),
-            }}
-          />
-        </div>
+      <span className="CategoryProgressAmount">
+        {numToCurrency(props.amount)}
+      </span>
+      <span className="CategoryProgressBudget">/{props.budget}</span>
+      <div className="CategoryProgressMeter">
+        <span
+          className="CategoryProgressBar"
+          style={{
+            width: calcAmountCssPercent(props.amount, props.budget),
+          }}
+        />
       </div>
     </StyledCategoryProgress>
   )
