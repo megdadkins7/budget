@@ -26,7 +26,7 @@ const StyledSubCategory = styled.div`
 `
 
 const subCategoryInfo = {
-  id: 'booksmoviesmusic',
+  id: 'Books/Movies/Music',
   title: 'Books/Movies/Music',
 }
 
@@ -53,8 +53,8 @@ export default function SubCategory(props) {
         </span>
       </div>
       <ul className="SubCategoryEntries">
-        {subCategoryEntries.map(entryItem => (
-          <Entry {...entryItem} />
+        {subCategoryEntries.map((entryItem, i) => (
+          <Entry key={i} {...entryItem} />
         ))}
       </ul>
     </StyledSubCategory>
