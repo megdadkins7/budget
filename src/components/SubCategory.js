@@ -54,7 +54,7 @@ export default function SubCategory(props) {
       </div>
       <ul className="SubCategoryEntries">
         {subCategoryEntries.map((entryItem, i) => (
-          <Entry key={i} {...entryItem} />
+          <Entry key={`${subCategoryInfo.id}${i}`} {...entryItem} />
         ))}
       </ul>
     </StyledSubCategory>

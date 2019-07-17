@@ -76,7 +76,7 @@ export default function Category() {
       </div>
       <ul className="CategoryList">
         {data.subCategories.map((subCategoryItem, i) => (
-          <SubCategory key={i}  />
+          <SubCategory key={`${data.id}${i}`} {...subCategoryItem} />
         ))}
       </ul>
     </StyledCategory>
