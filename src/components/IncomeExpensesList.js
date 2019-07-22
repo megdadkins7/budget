@@ -10,11 +10,11 @@ const StyledList = styled.div`
     margin: 16px;
     font-weight: 500;
 
-  .ListItems {
+  .IEListItems {
     margin-left: auto;
   }
 
-  .ListTitle {
+  .IEListTitle {
     display: flex;
     flex-wrap: wrap;
     margin-left: 10px;
@@ -26,9 +26,9 @@ export default function IncomeExpensesList(props) {
     return (
     <StyledList>
       <div>
-        <span className='ListTitle'>{props.title}: </span>
+        <span className='IEListTitle'>{props.title}: </span>
       </div>
-      <div className="ListItems">
+      <div className="IEListItems">
         <span>{numToCurrency(props.amount)}</span>
         <span>/{props.total.toFixed(2)}</span>
       </div>
