@@ -4,33 +4,28 @@ import styled from 'styled-components'
 
 
 const StyledSummaryPage = styled.div`
-    .GridWrapper {
-        display: grid;
-        grid-gap: 10px;
-        grid-template-columns: repeat(4, 80px);
-        grid-template-rows: repeat(3,100px);
-        align-content: space-around;
-        justify-content: space-between;
-    }
-    .HeaderCell {
-        grid-column: 1 / 5;
-    }
-    .LeftScrollCell {
-        grid-column: 1 / 3;
-        grid-row: 2 / 4;
-    }
-    .TopRightStaticCell {
-        grid-column: 3 / 5;
-    }
+.GridWrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 200px);
+    align-content: space-around;
+    justify-content: space-between;
+  }
+  .LeftScrollCell {
+    grid-column: 1 / 3;
+    grid-row: 1 / 4;
+  }
+  .TopRightStaticCell {
+    margin-top: 12px;
+    grid-column: 3 / 5;
+  }
 `;
 
 export default function SummaryPage() {
     return (
         <StyledSummaryPage>
             <div className='GridWrapper'>
-                <div className='HeaderCell'>
-                    <span>Hello from header/navbar</span>
-                </div>
                 <div className='LeftScrollCell'>
                     <span>Hello from budget list</span>
                     <ul>
