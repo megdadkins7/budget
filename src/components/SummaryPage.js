@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
 const StyledSummaryPage = styled.div`
   .GridWrapper {
     max-width: 80%;
@@ -9,7 +10,9 @@ const StyledSummaryPage = styled.div`
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(10px, auto);
-    grid-template-rows: 55px calc(100vh - 55px);
+  }
+  .GridWrapper > div {
+    padding: 1em;
   }
   .Header {
     grid-column: 1 / 4;
@@ -59,10 +62,10 @@ export default function SummaryPage() {
                         <span>Hello from budget overview</span>
                     </div>
                     <div className="DoughnutLeft">
-                        <span>Hello from doughnut charts</span>
+                      <span>Hello from doughnut charts</span>
                     </div>
                     <div className="DoughnutRight">
-                        <span>Hello from doughnut charts</span>
+                      <span>Hello from doughnut charts</span>
                     </div>
             </div>
         </StyledSummaryPage>
