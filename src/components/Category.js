@@ -5,7 +5,7 @@ import CategoryProgress from './CategoryProgress'
 import SubCategory, { subCategoryTotal } from './SubCategory'
 
 const StyledCategory = styled.div`
-  width: 80%;
+  width: 100%;
   .CategoryWrapper {
     display: flex;
     align-items: center;
@@ -32,6 +32,7 @@ const StyledCategory = styled.div`
   }
   .CategoryRightChild {
     margin-left: auto;
+    margin-right: 180px;
   }
 `
 

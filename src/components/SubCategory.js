@@ -16,6 +16,7 @@ const StyledSubCategory = styled.div`
 
   .SubCategoryTotal {
     margin-left: auto;
+    margin-right: 180px;
   }
 
   .SubCategoryEntries {

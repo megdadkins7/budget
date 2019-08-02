@@ -3,7 +3,8 @@ import styled from 'styled-components'
 
 import BudgetList from './BudgetList'
 import Overview from './Overview'
-import DoughnutChart from './DoughnutChart'
+import IncomeDonut from './IncomeDonut'
+import ExpenseDonut from './ExpenseDonut'
 
 const StyledSummaryPage = styled.div`
   .GridWrapper {
@@ -114,7 +115,7 @@ export default function SummaryPage() {
                         <Overview />
                     </div>
                     <div className="DoughnutLeft">
-                      <DoughnutChart 
+                      <IncomeDonut 
                         doughnutlabel='income'
                         amount= "2285"
                         total="2990"
@@ -122,7 +123,7 @@ export default function SummaryPage() {
                       />
                     </div>
                     <div className="DoughnutRight">
-                      <DoughnutChart 
+                      <ExpenseDonut 
                         doughnutlabel='expenses' 
                         amount="1968"
                         total="2529"
